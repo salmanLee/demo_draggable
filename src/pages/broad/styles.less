@@ -1,0 +1,111 @@
+@import '~antd/es/style/themes/default.less';
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.innerBorder{
+    border-color: black;
+}
+
+.box{
+    width: 140px;
+    height: 160px;
+    background-color: black;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.btn{
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(101, 205, 240);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1;
+    animation:myBtnOff 1s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    -webkit-animation:myBtnOff 1s; /* Safari and Chrome */
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+}
+
+.btn::selection{
+    
+}
+
+.btn:hover{
+    animation:myBtnOn 1s;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    -webkit-animation:myBtnOn 1s; /* Safari and Chrome */
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+}
+
+.btnOff{
+    animation:myBtnOff 1s;
+    animation-iteration-count:2;
+    animation-fill-mode:forwards;
+    -webkit-animation:myBtnOff 1s; /* Safari and Chrome */
+    -webkit-animation-iteration-count:2;
+    -webkit-animation-fill-mode:forwards;
+}
+
+@keyframes myBtnOn
+{
+    from {
+        background-color: rgb(101, 205, 240); right: -40px;
+    }
+    to {
+        background:red; right:0px; 
+    }
+}
+
+@-webkit-keyframes myBtnOn /* Safari and Chrome */
+{
+    from {
+        background-color: rgb(101, 205, 240); right: -40px;
+    }
+    to {
+        background:red; right:0px;
+    }
+}
+
+@keyframes myBtnOff
+{
+    from {
+        background:red; right:0px;
+    }
+    to {
+        background-color: rgb(101, 205, 240);right: -40px;
+    }
+}
+
+@-webkit-keyframes myBtnOff /* Safari and Chrome */
+{
+    from {
+        background:red; right:0px;
+    }
+    to {
+        background-color: rgb(101, 205, 240);right: -40px;
+    }
+}
